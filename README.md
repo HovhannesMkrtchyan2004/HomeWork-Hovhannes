@@ -1,55 +1,68 @@
-// The Poker Game
+var D2 = {mast:'D',item:'2',number:0};
+var C2 = {mast:'C',item:'2',number:0};
+var H2 = {mast:'H',item:'2',number:0};
+var S2 = {mast:'S',item:'2',number:0};
+var D3 = {mast:'D',item:'3',number:1};
+var C3 = {mast:'C',item:'3',number:1};
+var H3 = {mast:'H',item:'3',number:1};
+var S3 = {mast:'S',item:'3',number:1};
+var D4 = {mast:'D',item:'4',number:2};
+var C4 = {mast:'C',item:'4',number:2};
+var H4 = {mast:'H',item:'4',number:2};
+var S4 = {mast:'S',item:'4',number:2};
+var D5 = {mast:'D',item:'5',number:3};
+var C5 = {mast:'C',item:'5',number:3};
+var H5 = {mast:'H',item:'5',number:3};
+var S5 = {mast:'S',item:'5',number:3};
+var D6 = {mast:'D',item:'6',number:4};
+var C6 = {mast:'C',item:'6',number:4};
+var H6 = {mast:'H',item:'6',number:4};
+var S6 = {mast:'S',item:'6',number:4};
+var D7 = {mast:'D',item:'7',number:5};
+var C7 = {mast:'C',item:'7',number:5};
+var H7 = {mast:'H',item:'7',number:5};
+var S7 = {mast:'S',item:'7',number:5};
+var D8 = {mast:'D',item:'8',number:6};
+var C8 = {mast:'C',item:'8',number:6};
+var H8 = {mast:'H',item:'8',number:6};
+var S8 = {mast:'S',item:'8',number:6};
+var D9 = {mast:'D',item:'9',number:7};
+var C9 = {mast:'C',item:'9',number:7};
+var H9 = {mast:'H',item:'9',number:7};
+var S9 = {mast:'S',item:'9',number:7};
+var D10 = {mast:'D',item:'10',number:8};
+var C10 = {mast:'C',item:'10',number:8};
+var H10 = {mast:'H',item:'10',number:8};
+var S10 = {mast:'S',item:'10',number:8};
+var DJ = {mast:'D',item:'J',number:9};
+var CJ = {mast:'C',item:'J',number:9};
+var HJ = {mast:'H',item:'J',number:9};
+var SJ = {mast:'S',item:'J',number:9};
+var DQ = {mast:'D',item:'Q',number:10};
+var CQ = {mast:'C',item:'Q',number:10};
+var HQ = {mast:'H',item:'Q',number:10};
+var SQ = {mast:'S',item:'Q',number:10};
+var DK = {mast:'D',item:'K',number:11};
+var CK = {mast:'C',item:'K',number:11};
+var HK = {mast:'H',item:'K',number:11};
+var SK = {mast:'S',item:'K',number:11};
+var DA = {mast:'D',item:'A',number:12};
+var CA = {mast:'C',item:'A',number:12};
+var HA = {mast:'H',item:'A',number:12};
+var SA = {mast:'S',item:'A',number:12};
 
-let player1 = [];
-let player2 = [];
-let player3 = [];
-let player4 = [];
-let player5 = [];
-let board = [];
+// C, D, S, H
+let arr =  [CA, SK, S10, D2, C4]
 
-let deckOfCards = [
-    "D2", "C2", "H2", "S2", 
-    "D3", "C3", "H3", "S3", 
-    "D4", "C4", "H4", "S4", 
-    "D5", "C5", "H5", "S5", 
-    "D6", "C6", "H6", "S6",
-    "D7", "C7", "H7", "S7", 
-    "D8", "C8", "H8", "S8",  
-    "D9", "C9", "H9", "S9",
-    "D10", "C10", "H10", "S10", 
-    "DQ", "CQ", "HQ", "SQ", 
-    "DJ", "CJ", "HJ", "SJ", 
-    "DK", "CK", "HK", "SK", 
-    "DA", "CA", "HA", "SA"
-];
+let x = arr[0].mast;
+let y = arr[1].mast;
+let z = arr[2].mast;
+let a = arr[3].mast;
+let b = arr[4].mast;
+let arr1 = []
+arr1.push(x,y,z,a,b)
 
-//console.log(deckOfCards); // for debug
+arr1.sort()
 
-// method for get new card from the deck and return new array without pop cart
-let getNewCard = deckOfCards => {
-    let rand = Math.round(Math.random() * (deckOfCards.length-1));
-    let cart = deckOfCards[rand];
-    //console.log(cart); // for debug
-    deckOfCards.splice(rand, 1);
-    return cart;
-};
-
-
-// metod razdachi kart igrokam - 1 krug po 1 karte kajdomu
-let distributionOfCards = () => {
-    player1.push(getNewCard(deckOfCards));
-    player2.push(getNewCard(deckOfCards));
-    player3.push(getNewCard(deckOfCards));
-    player4.push(getNewCard(deckOfCards));
-    player5.push(getNewCard(deckOfCards));
-};
-// We gave the players two cards
-distributionOfCards()
-distributionOfCards()
-
-
-// "In board will be 3 cards"
-board.push(getNewCard(deckOfCards));
-board.push(getNewCard(deckOfCards));
-board.push(getNewCard(deckOfCards));
+console.log(arr1)
 
